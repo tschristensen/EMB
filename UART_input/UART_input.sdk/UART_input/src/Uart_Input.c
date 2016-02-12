@@ -27,33 +27,43 @@ int main() {
 
 	/* GPIO driver initialisation */
 	Status = XGpio_Initialize(&GPIO, GPIO_DEVICE_ID);
-	if (Status != XST_SUCCESS) {
+	if (Status != XST_SUCCESS)
+	{
 		return XST_FAILURE;
 	}
 
 	/*Set the direction for the LEDs to output. */
 	XGpio_SetDataDirection(&GPIO, LED_CHANNEL, 0x0);
-	print("Welcome to this awesome LED blinker application!!\n\r");
 
-	while (1) {
+	while (1)
+	{
+		print("Welcome to this awesome LED blinker application!\n\n\r"
+				"Turn on LEDs by the following commands:\n\n\r\t "
+					"#1: Turn on LD0\n\r\t "
+					"#2: Turn on LD1\n\r\t "
+					"#3: Turn on LD2\n\r\t "
+					"#4: Turn on LD3\n\n\r "
+					"Choose an option: ");
 
 		/* Flush UART FIFO */
-		while (XUartPs_IsReceiveData(UART_BASEADDR)) {
+		while (XUartPs_IsReceiveData(UART_BASEADDR))
+		{
 			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 		}
 
 		/* Wait for data on UART */
-		while (!XUartPs_IsReceiveData(UART_BASEADDR)) {
-		}
+		while (!XUartPs_IsReceiveData(UART_BASEADDR)){}
 
 		/* Store the first character in the UART receive FIFO and echo it */
-		if (XUartPs_IsReceiveData(UART_BASEADDR)) {
+		if (XUartPs_IsReceiveData(UART_BASEADDR))
+		{
 			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 		}
 
 		//xil_printf("%c",userInput);
 
-		switch(userInput) {
+		switch(userInput)
+		{
 		case '1' :
 			XGpio_DiscreteWrite(&GPIO, LED_CHANNEL, 0b0001);
 			break;
@@ -71,17 +81,16 @@ int main() {
 			break;
 
 		default:
-			//XGpio_DiscreteWrite(&GPIO, LED_CHANNEL, 0b0000);
-			print("MOTHERFUCKER!! \n\r");
+			XGpio_DiscreteWrite(&GPIO, LED_CHANNEL, 0b0000);
+			print("Invalid entry. Valid entries are numbers 1-4. \n\r");
 
 			//Flush UART FIFO
-			while (XUartPs_IsReceiveData(UART_BASEADDR)) {
+			while (XUartPs_IsReceiveData(UART_BASEADDR))
+			{
 				XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 			}
 			break;
 		}
-
-
 	}
 	cleanup_platform();
 	return 0;

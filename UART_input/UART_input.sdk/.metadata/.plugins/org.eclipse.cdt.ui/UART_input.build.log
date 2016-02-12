@@ -1,6 +1,21 @@
-11:46:31 **** Incremental Build of configuration Debug for project UART_input ****
+15:22:31 **** Auto Build of configuration Debug for project UART_input ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/Uart_Input.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Uart_Input.o" -I../../UART_input_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Uart_Input.d" -MT"src/Uart_Input.d" -o "src/Uart_Input.o" "../src/Uart_Input.c"
+Finished building: ../src/Uart_Input.c
+ 
+Building target: UART_input.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../UART_input_bsp/ps7_cortexa9_0/lib -o "UART_input.elf"  ./src/Uart_Input.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: UART_input.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size UART_input.elf  |tee "UART_input.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24628	   1168	  22596	  48392	   bd08	UART_input.elf
+Finished building: UART_input.elf.size
+ 
 
-11:46:31 Build Finished (took 108ms)
+15:22:31 Build Finished (took 160ms)
 

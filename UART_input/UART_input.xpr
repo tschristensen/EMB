@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2015.4 (64-bit)              -->
+<!-- Product Version: Vivado v2015.4.1 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="/home/mikkeljaedicke/Documents/EMB/UART_input/UART_input.xpr">
+<Project Version="7" Minor="10" Path="/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7fbabf4e9c764e0ab24bcf56052c61f5"/>
@@ -34,6 +34,16 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hdl/UART_input_design.hwdef"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hw_handoff/UART_input_design_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hw_handoff/UART_input_design.hwh"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="UART_input_design_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hdl/UART_input_design.vhd"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_auto_pc_0/UART_input_design_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_processing_system7_0_0/UART_input_design_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_axi_gpio_0_0/UART_input_design_axi_gpio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_processing_system7_0_axi_periph_0/UART_input_design_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_rst_processing_system7_0_100M_0/UART_input_design_rst_processing_system7_0_100M_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd">
         <FileInfo>

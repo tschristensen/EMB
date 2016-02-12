@@ -1,14 +1,14 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Fri Feb 12 09:52:45 2016
-| Host         : mikkel running 64-bit Ubuntu 15.10
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4.1 (lin64) Build 1431336 Fri Dec 11 14:52:39 MST 2015
+| Date         : Fri Feb 12 14:09:07 2016
+| Host         : Lenovo-G580 running 64-bit Ubuntu 15.04
 | Command      : report_io -file UART_input_design_wrapper_io_placed.rpt
 | Design       : UART_input_design_wrapper
 | Device       : xc7z010
 | Speed File   : -1
 | Package      : clg400
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
 IO Information
 

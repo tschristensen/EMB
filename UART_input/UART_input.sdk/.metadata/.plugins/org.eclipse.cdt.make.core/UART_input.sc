@@ -2,6 +2,9 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.arm.exe.debug.1650514329;xilinx.gnu.arm.exe.debug.1650514329.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/home/thomas/Programs/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include"/>
+<includePath path="/home/thomas/Programs/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed"/>
+<includePath path="/home/thomas/Programs/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/include"/>
 <includePath path="/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include"/>
 <includePath path="/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed"/>
 <includePath path="/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/include"/>
@@ -732,6 +735,9 @@
 </instance>
 <instance id="xilinx.gnu.arm.exe.debug.1650514329;xilinx.gnu.arm.exe.debug.1650514329.;xilinx.gnu.arm.c.toolchain.compiler.debug.81274785;xilinx.gnu.arm.c.compiler.input.2085622326">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/home/thomas/Programs/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include"/>
+<includePath path="/home/thomas/Programs/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed"/>
+<includePath path="/home/thomas/Programs/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/include"/>
 <includePath path="/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include"/>
 <includePath path="/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/include-fixed"/>
 <includePath path="/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/include"/>
