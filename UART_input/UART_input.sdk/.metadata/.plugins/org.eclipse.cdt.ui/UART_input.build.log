@@ -1,6 +1,6 @@
-11:09:57 **** Incremental Build of configuration Debug for project UART_input ****
+11:46:31 **** Incremental Build of configuration Debug for project UART_input ****
 make all 
 make: Nothing to be done for 'all'.
 
-11:09:57 Build Finished (took 68ms)
+11:46:31 Build Finished (took 108ms)
 

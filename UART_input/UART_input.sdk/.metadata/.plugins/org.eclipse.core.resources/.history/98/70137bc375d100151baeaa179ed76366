@@ -51,7 +51,7 @@ int main() {
 			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 		}
 
-		//xil_printf("%c",userInput);
+		xil_printf("%c",userInput);
 
 		switch(userInput) {
 		case '1' :
