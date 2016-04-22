@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;rtcs/src/init_tasks&apos; to &apos;init_tasks.h&apos;" description="Rename resource &apos;init_tasks&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/init_tasks" name="init_tasks.h" stamp="1460102429917" updateReferences="true"/>
+</session>

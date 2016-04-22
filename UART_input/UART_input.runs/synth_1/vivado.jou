@@ -2,8 +2,8 @@
 # Vivado v2015.4.1 (64-bit)
 # SW Build 1431336 on Fri Dec 11 14:52:39 MST 2015
 # IP Build 1427053 on Mon Dec  7 12:56:29 MST 2015
-# Start of session at: Fri Feb 12 14:06:30 2016
-# Process ID: 23055
+# Start of session at: Fri Feb 19 09:58:40 2016
+# Process ID: 32464
 # Current directory: /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1
 # Command line: vivado -log UART_input_design_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source UART_input_design_wrapper.tcl
 # Log file: /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/UART_input_design_wrapper.vds

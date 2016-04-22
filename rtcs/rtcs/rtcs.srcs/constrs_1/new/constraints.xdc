@@ -1,0 +1,6 @@
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_io[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_io[0]}]
+set_property PULLDOWN true [get_ports {gpio_rtl_tri_io[1]}]
+set_property PULLDOWN true [get_ports {gpio_rtl_tri_io[0]}]
+set_property PACKAGE_PIN V12 [get_ports {gpio_rtl_tri_io[1]}]
+set_property PACKAGE_PIN V13 [get_ports {gpio_rtl_tri_io[0]}]

@@ -19,17 +19,17 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
 WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1102.137 ; gain = 257.930 ; free physical = 750 ; free virtual = 9648
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1102.129 ; gain = 257.930 ; free physical = 1177 ; free virtual = 8517
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'UART_input_design_wrapper' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:41]
-INFO: [Synth 8-3491] module 'UART_input_design' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:579' bound to instance 'UART_input_design_i' of component 'UART_input_design' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'UART_input_design' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:610]
-INFO: [Synth 8-3491] module 'UART_input_design_axi_gpio_0_0' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_axi_gpio_0_0/synth/UART_input_design_axi_gpio_0_0.vhd:59' bound to instance 'axi_gpio_0' of component 'UART_input_design_axi_gpio_0_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:817]
+INFO: [Synth 8-3491] module 'UART_input_design' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:579' bound to instance 'UART_input_design_i' of component 'UART_input_design' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'UART_input_design' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:612]
+INFO: [Synth 8-3491] module 'UART_input_design_axi_gpio_0_0' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_axi_gpio_0_0/synth/UART_input_design_axi_gpio_0_0.vhd:59' bound to instance 'axi_gpio_0' of component 'UART_input_design_axi_gpio_0_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:821]
 INFO: [Synth 8-638] synthesizing module 'UART_input_design_axi_gpio_0_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_axi_gpio_0_0/synth/UART_input_design_axi_gpio_0_0.vhd:86]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 4 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -46,7 +46,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/thomas/Documents/Git/E
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 4 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -115,9 +115,9 @@ INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [/home/thomas
 INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 4 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
-	Parameter C_MAX_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 4 - type: integer 
 	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
@@ -131,7 +131,7 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/thomas/Documents/Git/E
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
 	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
-	Parameter C_VECTOR_WIDTH bound to: 32 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 4 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
@@ -142,62 +142,6 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_t
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
-	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
@@ -205,118 +149,6 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
@@ -333,104 +165,27 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
-INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
 	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (6#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (7#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
 INFO: [Synth 8-256] done synthesizing module 'UART_input_design_axi_gpio_0_0' (8#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_axi_gpio_0_0/synth/UART_input_design_axi_gpio_0_0.vhd:86]
-INFO: [Synth 8-3491] module 'UART_input_design_processing_system7_0_0' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_processing_system7_0_0/synth/UART_input_design_processing_system7_0_0.v:57' bound to instance 'processing_system7_0' of component 'UART_input_design_processing_system7_0_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:843]
+INFO: [Synth 8-3491] module 'UART_input_design_processing_system7_0_0' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_processing_system7_0_0/synth/UART_input_design_processing_system7_0_0.v:57' bound to instance 'processing_system7_0' of component 'UART_input_design_processing_system7_0_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:846]
 INFO: [Synth 8-638] synthesizing module 'UART_input_design_processing_system7_0_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_processing_system7_0_0/synth/UART_input_design_processing_system7_0_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
@@ -1246,7 +1001,7 @@ INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_axi_
 INFO: [Synth 8-256] done synthesizing module 'UART_input_design_auto_pc_0' (31#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_auto_pc_0/synth/UART_input_design_auto_pc_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_NUVCJ6' (32#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:78]
 INFO: [Synth 8-256] done synthesizing module 'UART_input_design_processing_system7_0_axi_periph_0' (33#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:392]
-INFO: [Synth 8-3491] module 'UART_input_design_rst_processing_system7_0_100M_0' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/synth/UART_input_design_rst_processing_system7_0_100M_0.vhd:59' bound to instance 'rst_processing_system7_0_100M' of component 'UART_input_design_rst_processing_system7_0_100M_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:979]
+INFO: [Synth 8-3491] module 'UART_input_design_rst_processing_system7_0_100M_0' declared at '/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/synth/UART_input_design_rst_processing_system7_0_100M_0.vhd:59' bound to instance 'rst_processing_system7_0_100M' of component 'UART_input_design_rst_processing_system7_0_100M_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:982]
 INFO: [Synth 8-638] synthesizing module 'UART_input_design_rst_processing_system7_0_100M_0' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/synth/UART_input_design_rst_processing_system7_0_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -1285,11 +1040,17 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/thomas
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:514]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:545]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:554]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:564]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:574]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:584]
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (34#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
@@ -1299,11 +1060,17 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/thomas
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:514]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:545]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:554]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:564]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:574]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:584]
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (34#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'lpf' (35#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
@@ -1313,10 +1080,20 @@ INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (36#1) [/home/thomas/Docu
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (37#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (38#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:199]
 INFO: [Synth 8-256] done synthesizing module 'UART_input_design_rst_processing_system7_0_100M_0' (39#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/synth/UART_input_design_rst_processing_system7_0_100M_0.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'UART_input_design' (40#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:610]
-INFO: [Synth 8-256] done synthesizing module 'UART_input_design_wrapper' (41#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'UART_input_design' (40#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design.vhd:612]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/home/thomas/Programs/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'gpio_rtl_tri_iobuf_0' of component 'IOBUF' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [/home/thomas/Programs/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (41#1) [/home/thomas/Programs/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/home/thomas/Programs/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'gpio_rtl_tri_iobuf_1' of component 'IOBUF' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:138]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/home/thomas/Programs/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'gpio_rtl_tri_iobuf_2' of component 'IOBUF' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:145]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/home/thomas/Programs/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'gpio_rtl_tri_iobuf_3' of component 'IOBUF' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:152]
+INFO: [Synth 8-256] done synthesizing module 'UART_input_design_wrapper' (42#1) [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd:41]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1199.688 ; gain = 355.480 ; free physical = 597 ; free virtual = 9514
+Finished RTL Elaboration : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1198.680 ; gain = 354.480 ; free physical = 1089 ; free virtual = 8419
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1326,9 +1103,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1199.688 ; gain = 355.480 ; free physical = 597 ; free virtual = 9514
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1198.680 ; gain = 354.480 ; free physical = 1089 ; free virtual = 8419
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1347,6 +1124,34 @@ Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_inp
 Finished Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/UART_input_design_rst_processing_system7_0_100M_0_board.xdc] for cell 'UART_input_design_i/rst_processing_system7_0_100M'
 Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/UART_input_design_rst_processing_system7_0_100M_0.xdc] for cell 'UART_input_design_i/rst_processing_system7_0_100M'
 Finished Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ip/UART_input_design_rst_processing_system7_0_100M_0/UART_input_design_rst_processing_system7_0_100M_0.xdc] for cell 'UART_input_design_i/rst_processing_system7_0_100M'
+Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[3]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[2]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[1]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[0]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[3]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[2]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[1]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_io[0]'. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_input_design_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UART_input_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_input_design_wrapper_propImpl.xdc].
@@ -1354,28 +1159,29 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/UART_input_d
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 205 instances were transformed.
-  FDR => FDRE: 204 instances
+  A total of 41 instances were transformed.
+  FDR => FDRE: 36 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1413.867 ; gain = 0.000 ; free physical = 565 ; free virtual = 9410
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1406.859 ; gain = 0.000 ; free physical = 978 ; free virtual = 8308
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23108 
+INFO: Helper process launched with PID 32488 
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 1413.871 ; gain = 569.664 ; free physical = 588 ; free virtual = 9432
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1406.863 ; gain = 562.664 ; free physical = 968 ; free virtual = 8299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 1413.871 ; gain = 569.664 ; free physical = 588 ; free virtual = 9432
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1406.863 ; gain = 562.664 ; free physical = 968 ; free virtual = 8299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for UART_input_design_i/processing_system7_0/inst. (constraint file  /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc, line 23).
-Applied set_property DONT_TOUCH = true for UART_input_design_i/axi_gpio_0/U0. (constraint file  /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc, line 26).
+Applied set_property DONT_TOUCH = true for UART_input_design_i/processing_system7_0/inst. (constraint file  /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc, line 25).
+Applied set_property DONT_TOUCH = true for UART_input_design_i/axi_gpio_0/U0. (constraint file  /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.runs/synth_1/dont_touch.xdc, line 28).
 Applied set_property DONT_TOUCH = true for UART_input_design_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for UART_input_design_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for UART_input_design_i/processing_system7_0. (constraint file  auto generated constraint, line ).
@@ -1383,7 +1189,7 @@ Applied set_property DONT_TOUCH = true for UART_input_design_i/processing_system
 Applied set_property DONT_TOUCH = true for UART_input_design_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for UART_input_design_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:14 . Memory (MB): peak = 1413.871 ; gain = 569.664 ; free physical = 613 ; free virtual = 9432
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1406.863 ; gain = 562.664 ; free physical = 968 ; free virtual = 8299
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -1392,7 +1198,7 @@ INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because ad
 INFO: [Synth 8-5544] ROM "address_offset" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:222]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1413.871 ; gain = 569.664 ; free physical = 604 ; free virtual = 9424
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1406.863 ; gain = 562.664 ; free physical = 977 ; free virtual = 8308
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1416,27 +1222,27 @@ Detailed RTL Component Info :
 +---Registers : 
 	               66 Bit    Registers := 4     
 	               47 Bit    Registers := 2     
-	               32 Bit    Registers := 5     
+	               32 Bit    Registers := 2     
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 7     
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 4     
-	                4 Bit    Registers := 7     
+	                4 Bit    Registers := 10    
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 12    
-	                1 Bit    Registers := 101   
+	                1 Bit    Registers := 69    
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     47 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 10    
+	   2 Input     32 Bit        Muxes := 9     
 	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 4     
 	   2 Input      9 Bit        Muxes := 5     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 18    
+	   2 Input      4 Bit        Muxes := 20    
 	   2 Input      3 Bit        Muxes := 2     
 	   7 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
@@ -1492,16 +1298,18 @@ Detailed RTL Component Info :
 Module GPIO_Core 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 3     
-	                1 Bit    Registers := 34    
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
 Module axi_gpio 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 Module xlnx_axi_wrshim_unwrap 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1680,7 +1488,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1413.875 ; gain = 569.668 ; free physical = 604 ; free virtual = 9424
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 1406.867 ; gain = 562.668 ; free physical = 977 ; free virtual = 8308
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1688,9 +1496,9 @@ INFO: [Synth 8-4471] merging register 'bus2ip_reset_reg' into 'AXI_LITE_IPIF_I/I
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1413.875 ; gain = 569.668 ; free physical = 588 ; free virtual = 9418
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1406.867 ; gain = 562.668 ; free physical = 972 ; free virtual = 8303
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1413.875 ; gain = 569.668 ; free physical = 588 ; free virtual = 9418
+Finished Parallel Reinference  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1406.867 ; gain = 562.668 ; free physical = 972 ; free virtual = 8303
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1701,9 +1509,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1413.875 ; gain = 569.668 ; free physical = 569 ; free virtual = 9402
+Finished Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1406.867 ; gain = 562.668 ; free physical = 955 ; free virtual = 8287
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1413.875 ; gain = 569.668 ; free physical = 569 ; free virtual = 9402
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1406.867 ; gain = 562.668 ; free physical = 955 ; free virtual = 8287
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1717,10 +1525,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 1560.867 ; gain = 716.660 ; free physical = 345 ; free virtual = 9205
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:17 . Memory (MB): peak = 1560.859 ; gain = 716.660 ; free physical = 757 ; free virtual = 8089
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 1604.969 ; gain = 760.762 ; free physical = 310 ; free virtual = 9158
+Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1603.961 ; gain = 759.762 ; free physical = 714 ; free virtual = 8045
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1735,66 +1543,10 @@ INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[10].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[12].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[10].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[12].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
-INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_reg ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3] ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2] ) is unused and will be removed from module axi_gpio.
@@ -1802,6 +1554,62 @@ INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_D
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[1] ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[0] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[1] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[2] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[3] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[4] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[5] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[6] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[7] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[8] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[9] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[10] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[11] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[12] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[13] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[14] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[15] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[16] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[17] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[18] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[19] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[20] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[21] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[22] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[23] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[24] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[25] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[26] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\ip2bus_data_i_D1_reg[27] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[31] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[28] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[27] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[26] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[25] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[24] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[23] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[21] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[20] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[19] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[18] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[17] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[16] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[15] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[14] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[13] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[12] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[11] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[10] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[9] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[8] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[7] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[6] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[5] ) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[4] ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[1] ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] ) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[37] ) is unused and will be removed from module UART_input_design_auto_pc_0.
@@ -1833,16 +1641,16 @@ INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module UART_input_design_rst_processing_system7_0_100M_0.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 327 ; free virtual = 9144
+Finished Technology Mapping : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 327 ; free virtual = 9144
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 327 ; free virtual = 9144
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1875,7 +1683,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:38 ; elapsed = 00:01:40 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9143
+Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:23 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1888,7 +1696,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:38 ; elapsed = 00:01:40 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9143
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1900,25 +1708,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:38 ; elapsed = 00:01:41 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9144
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:01:41 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9144
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:39 ; elapsed = 00:01:41 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9143
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:01:41 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9143
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1955,34 +1763,34 @@ Report Cell Usage:
 |2     |BUFG    |     1|
 |3     |CARRY4  |    18|
 |4     |LUT1    |   155|
-|5     |LUT2    |    32|
-|6     |LUT3    |   244|
-|7     |LUT4    |    52|
-|8     |LUT5    |   102|
-|9     |LUT6    |   164|
+|5     |LUT2    |    33|
+|6     |LUT3    |   243|
+|7     |LUT4    |    56|
+|8     |LUT5    |    98|
+|9     |LUT6    |   139|
 |10    |PS7     |     1|
 |11    |SRL16   |     1|
 |12    |SRL16E  |    22|
 |13    |SRLC32E |    47|
-|14    |FDR     |   136|
-|15    |FDRE    |   777|
-|16    |FDSE    |    87|
-|17    |OBUF    |     4|
+|14    |FDR     |    24|
+|15    |FDRE    |   637|
+|16    |FDSE    |    59|
+|17    |IOBUF   |     4|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                        |Cells |
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
-|1     |top                                                |                                                              |  1973|
-|2     |  UART_input_design_i                              |UART_input_design                                             |  1969|
-|3     |    axi_gpio_0                                     |UART_input_design_axi_gpio_0_0                                |   405|
-|4     |      U0                                           |axi_gpio                                                      |   405|
-|5     |        AXI_LITE_IPIF_I                            |axi_lite_ipif                                                 |   109|
-|6     |          I_SLAVE_ATTACHMENT                       |slave_attachment                                              |   109|
-|7     |            I_DECODER                              |address_decoder                                               |    38|
-|8     |        gpio_core_1                                |GPIO_Core                                                     |   262|
-|9     |          \Not_Dual.INPUT_DOUBLE_REGS3             |cdc_sync                                                      |   128|
+|1     |top                                                |                                                              |  1668|
+|2     |  UART_input_design_i                              |UART_input_design                                             |  1664|
+|3     |    axi_gpio_0                                     |UART_input_design_axi_gpio_0_0                                |   100|
+|4     |      U0                                           |axi_gpio                                                      |   100|
+|5     |        AXI_LITE_IPIF_I                            |axi_lite_ipif                                                 |    56|
+|6     |          I_SLAVE_ATTACHMENT                       |slave_attachment                                              |    56|
+|7     |            I_DECODER                              |address_decoder                                               |    14|
+|8     |        gpio_core_1                                |GPIO_Core                                                     |    38|
+|9     |          \Not_Dual.INPUT_DOUBLE_REGS3             |cdc_sync                                                      |    16|
 |10    |    processing_system7_0                           |UART_input_design_processing_system7_0_0                      |   290|
 |11    |      inst                                         |processing_system7_v5_5_processing_system7                    |   290|
 |12    |        xlnx_axi_wrshim_unwrap_inst_gp0            |xlnx_axi_wrshim_unwrap                                        |    18|
@@ -2022,24 +1830,25 @@ Report Instance Areas:
 |46    |          SEQ_COUNTER                              |upcnt_n                                                       |    14|
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:01:41 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9143
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:26 . Memory (MB): peak = 1615.984 ; gain = 381.062 ; free physical = 326 ; free virtual = 9143
-Synthesis Optimization Complete : Time (s): cpu = 00:01:39 ; elapsed = 00:01:41 . Memory (MB): peak = 1615.984 ; gain = 771.777 ; free physical = 326 ; free virtual = 9143
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:12 . Memory (MB): peak = 1613.977 ; gain = 385.062 ; free physical = 701 ; free virtual = 8032
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1613.977 ; gain = 769.777 ; free physical = 701 ; free virtual = 8032
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 155 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 137 instances were transformed.
-  FDR => FDRE: 136 instances
+  A total of 29 instances were transformed.
+  FDR => FDRE: 24 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-381 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+323 Infos, 11 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1615.988 ; gain = 641.973 ; free physical = 325 ; free virtual = 9141
-report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1648.004 ; gain = 0.000 ; free physical = 339 ; free virtual = 9140
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 12 14:08:23 2016...
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1613.980 ; gain = 639.973 ; free physical = 701 ; free virtual = 8032
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1645.996 ; gain = 0.000 ; free physical = 699 ; free virtual = 8031
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 19 10:00:13 2016...

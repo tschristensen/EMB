@@ -1,8 +1,8 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
---Date        : Fri Feb 12 09:50:16 2016
---Host        : mikkel running 64-bit Ubuntu 15.10
+--Tool Version: Vivado v.2015.4.1 (lin64) Build 1431336 Fri Dec 11 14:52:39 MST 2015
+--Date        : Fri Feb 19 09:56:58 2016
+--Host        : Lenovo-G580 running 64-bit Ubuntu 15.04
 --Command     : generate_target UART_input_design.bd
 --Design      : UART_input_design
 --Purpose     : IP block netlist
@@ -599,10 +599,12 @@ entity UART_input_design is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    gpio_rtl_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_rtl_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_rtl_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of UART_input_design : entity is "UART_input_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=UART_input_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=1,da_board_cnt=1,da_ps7_cnt=1,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of UART_input_design : entity is "UART_input_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=UART_input_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=1,da_board_cnt=3,da_ps7_cnt=1,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of UART_input_design : entity is "UART_input_design.hwdef";
 end UART_input_design;
@@ -702,9 +704,9 @@ architecture STRUCTURE of UART_input_design is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_io_t : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_io_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_io_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component UART_input_design_axi_gpio_0_0;
   component UART_input_design_rst_processing_system7_0_100M_0 is
@@ -721,7 +723,9 @@ architecture STRUCTURE of UART_input_design is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component UART_input_design_rst_processing_system7_0_100M_0;
+  signal axi_gpio_0_GPIO_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_gpio_0_GPIO_TRI_T : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -802,8 +806,6 @@ architecture STRUCTURE of UART_input_design is
   signal processing_system7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
   signal rst_processing_system7_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_processing_system7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_axi_gpio_0_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 4 );
-  signal NLW_axi_gpio_0_gpio_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_processing_system7_0_TTC0_WAVE0_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
@@ -813,13 +815,14 @@ architecture STRUCTURE of UART_input_design is
   signal NLW_rst_processing_system7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_processing_system7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
-  leds_4bits_tri_o(3 downto 0) <= axi_gpio_0_GPIO_TRI_O(3 downto 0);
+  axi_gpio_0_GPIO_TRI_I(3 downto 0) <= gpio_rtl_tri_i(3 downto 0);
+  gpio_rtl_tri_o(3 downto 0) <= axi_gpio_0_GPIO_TRI_O(3 downto 0);
+  gpio_rtl_tri_t(3 downto 0) <= axi_gpio_0_GPIO_TRI_T(3 downto 0);
 axi_gpio_0: component UART_input_design_axi_gpio_0_0
      port map (
-      gpio_io_i(31 downto 0) => B"00000000000000000000000000000000",
-      gpio_io_o(31 downto 4) => NLW_axi_gpio_0_gpio_io_o_UNCONNECTED(31 downto 4),
+      gpio_io_i(3 downto 0) => axi_gpio_0_GPIO_TRI_I(3 downto 0),
       gpio_io_o(3 downto 0) => axi_gpio_0_GPIO_TRI_O(3 downto 0),
-      gpio_io_t(31 downto 0) => NLW_axi_gpio_0_gpio_io_t_UNCONNECTED(31 downto 0),
+      gpio_io_t(3 downto 0) => axi_gpio_0_GPIO_TRI_T(3 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => processing_system7_0_axi_periph_M00_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_processing_system7_0_100M_peripheral_aresetn(0),

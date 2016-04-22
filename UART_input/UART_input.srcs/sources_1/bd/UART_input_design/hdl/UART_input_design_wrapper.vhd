@@ -1,8 +1,8 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
---Date        : Fri Feb 12 09:50:17 2016
---Host        : mikkel running 64-bit Ubuntu 15.10
+--Tool Version: Vivado v.2015.4.1 (lin64) Build 1431336 Fri Dec 11 14:52:39 MST 2015
+--Date        : Fri Feb 19 09:56:58 2016
+--Host        : Lenovo-G580 running 64-bit Ubuntu 15.04
 --Command     : generate_target UART_input_design_wrapper.bd
 --Design      : UART_input_design_wrapper
 --Purpose     : IP block netlist
@@ -34,7 +34,7 @@ entity UART_input_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    gpio_rtl_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 end UART_input_design_wrapper;
 
@@ -62,9 +62,35 @@ architecture STRUCTURE of UART_input_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    gpio_rtl_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_rtl_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_rtl_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component UART_input_design;
+  component IOBUF is
+  port (
+    I : in STD_LOGIC;
+    O : out STD_LOGIC;
+    T : in STD_LOGIC;
+    IO : inout STD_LOGIC
+  );
+  end component IOBUF;
+  signal gpio_rtl_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_tri_i_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_tri_i_3 : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal gpio_rtl_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_tri_io_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_tri_io_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_tri_io_3 : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal gpio_rtl_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_tri_o_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_tri_o_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_tri_o_3 : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal gpio_rtl_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_tri_t_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_tri_t_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_tri_t_3 : STD_LOGIC_VECTOR ( 3 to 3 );
 begin
 UART_input_design_i: component UART_input_design
      port map (
@@ -89,6 +115,45 @@ UART_input_design_i: component UART_input_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      leds_4bits_tri_o(3 downto 0) => leds_4bits_tri_o(3 downto 0)
+      gpio_rtl_tri_i(3) => gpio_rtl_tri_i_3(3),
+      gpio_rtl_tri_i(2) => gpio_rtl_tri_i_2(2),
+      gpio_rtl_tri_i(1) => gpio_rtl_tri_i_1(1),
+      gpio_rtl_tri_i(0) => gpio_rtl_tri_i_0(0),
+      gpio_rtl_tri_o(3) => gpio_rtl_tri_o_3(3),
+      gpio_rtl_tri_o(2) => gpio_rtl_tri_o_2(2),
+      gpio_rtl_tri_o(1) => gpio_rtl_tri_o_1(1),
+      gpio_rtl_tri_o(0) => gpio_rtl_tri_o_0(0),
+      gpio_rtl_tri_t(3) => gpio_rtl_tri_t_3(3),
+      gpio_rtl_tri_t(2) => gpio_rtl_tri_t_2(2),
+      gpio_rtl_tri_t(1) => gpio_rtl_tri_t_1(1),
+      gpio_rtl_tri_t(0) => gpio_rtl_tri_t_0(0)
+    );
+gpio_rtl_tri_iobuf_0: component IOBUF
+     port map (
+      I => gpio_rtl_tri_o_0(0),
+      IO => gpio_rtl_tri_io(0),
+      O => gpio_rtl_tri_i_0(0),
+      T => gpio_rtl_tri_t_0(0)
+    );
+gpio_rtl_tri_iobuf_1: component IOBUF
+     port map (
+      I => gpio_rtl_tri_o_1(1),
+      IO => gpio_rtl_tri_io(1),
+      O => gpio_rtl_tri_i_1(1),
+      T => gpio_rtl_tri_t_1(1)
+    );
+gpio_rtl_tri_iobuf_2: component IOBUF
+     port map (
+      I => gpio_rtl_tri_o_2(2),
+      IO => gpio_rtl_tri_io(2),
+      O => gpio_rtl_tri_i_2(2),
+      T => gpio_rtl_tri_t_2(2)
+    );
+gpio_rtl_tri_iobuf_3: component IOBUF
+     port map (
+      I => gpio_rtl_tri_o_3(3),
+      IO => gpio_rtl_tri_io(3),
+      O => gpio_rtl_tri_i_3(3),
+      T => gpio_rtl_tri_t_3(3)
     );
 end STRUCTURE;

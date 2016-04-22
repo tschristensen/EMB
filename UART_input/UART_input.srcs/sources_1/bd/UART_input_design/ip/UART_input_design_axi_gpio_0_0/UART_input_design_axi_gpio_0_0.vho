@@ -73,9 +73,9 @@ COMPONENT UART_input_design_axi_gpio_0_0
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
-    gpio_io_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    gpio_io_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    gpio_io_t : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    gpio_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    gpio_io_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    gpio_io_t : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------

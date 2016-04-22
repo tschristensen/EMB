@@ -34,16 +34,16 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hdl/UART_input_design.hwdef"/>
-        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hw_handoff/UART_input_design_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hw_handoff/UART_input_design.hwh"/>
-        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="UART_input_design_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hdl/UART_input_design.vhd"/>
-        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_auto_pc_0/UART_input_design_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_processing_system7_0_0/UART_input_design_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_axi_gpio_0_0/UART_input_design_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_processing_system7_0_axi_periph_0/UART_input_design_processing_system7_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_rst_processing_system7_0_100M_0/UART_input_design_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="UART_input_design_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="ip/UART_input_design_auto_pc_0/UART_input_design_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hdl/UART_input_design.hwdef"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hw_handoff/UART_input_design.hwh"/>
+        <CompFileExtendedInfo CompFileName="UART_input_design.bd" FileRelPathName="hw_handoff/UART_input_design_bd.tcl"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd">
         <FileInfo>
@@ -59,7 +59,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

@@ -4,6 +4,8 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -28,6 +30,9 @@ set_property used_in_implementation false [get_files -all /home/thomas/Documents
 set_property is_locked true [get_files /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/UART_input_design.bd]
 
 read_vhdl -library xil_defaultlib /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/sources_1/bd/UART_input_design/hdl/UART_input_design_wrapper.vhd
+read_xdc /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files /home/thomas/Documents/Git/Electronics/EMB/UART_input/UART_input.srcs/constrs_1/new/constraints.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 synth_design -top UART_input_design_wrapper -part xc7z010clg400-1
