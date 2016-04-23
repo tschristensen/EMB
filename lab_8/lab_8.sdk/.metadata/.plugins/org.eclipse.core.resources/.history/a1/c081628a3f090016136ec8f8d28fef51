@@ -1,0 +1,354 @@
+/*****************************************************************************
+* University of Southern Denmark
+* Embedded C Programming (ECP)
+*
+* MODULENAME.: main.c
+*
+* PROJECT....: ECP
+*
+* DESCRIPTION: See module specification file (.h-file).
+*
+* Change Log:
+******************************************************************************
+* Date    Id    Change
+* YYMMDD
+* --------------------
+* 0902012  KHA   Module created.
+*
+*****************************************************************************/
+
+/***************************** Include files *******************************/
+
+//#include "khaOS/schedule.c"
+#include "khaOS/rtcs.h"
+#include "xgpio.h"
+#include "xparameters.h"
+#include "pwm_deluxe.h"
+#include "xtmrctr.h"
+#include "xscugic.h"
+#include "xgpio.h"
+#include "xuartps.h"
+
+/*****************************    Defines    *******************************/
+
+#define PI				3.14159265359
+#define GPIO_DEVICE_ID  XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device that LEDs are connected to */
+#define DEVICE_ID XPAR_PWM_DELUXE_0_DEVICE_ID
+
+#define UART_BASEADDR 			XPAR_PS7_UART_1_BASEADDR
+#define ALIVE_LED_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device that LEDs are connected to */
+#define ENCODER_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+#define TMR_DEVICE_ID			XPAR_TMRCTR_0_DEVICE_ID
+#define INTERRUPT_DEVICE_ID		XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+#define ENCODER_INTERRUPT_ID	XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define TIMER_INTERRUPT_ID   	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+
+#define LED_CHANNEL 			1							/* GPIO port for LEDs */
+#define ENCODER_CHANNEL			1							/* GPIO port for LEDs */
+#define ENCODER_INTERRUPT 		XGPIO_IR_CH1_MASK
+#define MAX_COUNT				0xFFFFFFFF
+#define TMR_LOAD				0x0003D090
+
+
+
+/*****************************   Constants   *******************************/
+
+/*****************************   Variables   *******************************/
+int led = 0x1;
+uint32_t position;
+XGpio Gpio;											/* GPIO Device driver instance 	*/
+pwm_deluxe pwm_gen_inst;							/* pwm  instance 				*/
+
+XGpio alive_led_gpio, encoder_gpio; /* GPIO Device driver instance */
+XScuGic interrupt;
+XTmrCtr timer;
+
+//int led = 0b0110;
+char rx_buffer[0xFF];
+char user_input = 0x00;
+int rx_tail = 0x00;
+
+int8_t val = 0, old_val;
+uint8_t enc_value, state = 0;
+uint16_t pwm_val = 0;
+
+/*****************************   Functions   *******************************/
+
+
+void encoder_interrupt_handler(void *InstancePtr)
+{
+	// Disable GPIO interrupts
+	XGpio_InterruptDisable(&encoder_gpio, ENCODER_INTERRUPT);
+	// Ignore additional button presses
+	if ((XGpio_InterruptGetStatus(&encoder_gpio) & ENCODER_INTERRUPT) != ENCODER_INTERRUPT)
+	{
+		return;
+	}
+
+	XTmrCtr_Reset(&timer,0);
+	XTmrCtr_Start(&timer,0);
+
+	// Increment counter based on button value
+	// Reset if centre button pressed
+	//led_data = led_data + enc_value;
+
+    //XGpio_DiscreteWrite(&LEDInst, 1, led_data);
+    (void)XGpio_InterruptClear(&encoder_gpio, ENCODER_INTERRUPT);
+    // Enable GPIO interrupts
+    XGpio_InterruptEnable(&encoder_gpio, ENCODER_INTERRUPT);
+}
+
+void timer_interrupt_handler(void *data)
+{
+	enc_value = XGpio_DiscreteRead(&encoder_gpio, 1);
+
+	XTmrCtr_Stop(&timer,0);
+
+	switch(enc_value)
+	{
+		case 0:
+			if(state == 1)
+			{
+				val--;
+			}
+			else if(state == 2)
+			{
+				val++;
+			}
+			state = 0;
+			break;
+		case 1:
+			state = 1;
+		break;
+		case 3:
+			state = 3;
+		break;
+		case 2:
+			state = 2;
+		break;
+		default:
+		break;
+	}
+}
+
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+{
+	// Enable interrupt
+	XGpio_InterruptEnable(&encoder_gpio, ENCODER_INTERRUPT);
+	XGpio_InterruptGlobalEnable(&encoder_gpio);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			 	 	 	 	 	 XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+
+
+	return XST_SUCCESS;
+
+}
+
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr)
+{
+	XScuGic_Config *IntcConfig;
+	int status;
+
+	// Interrupt controller initialisation
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&timer, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Call to interrupt setup
+	status = InterruptSystemSetup(&timer);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Connect GPIO interrupt to handler
+	status = XScuGic_Connect(&timer,
+								ENCODER_INTERRUPT_ID,
+								(Xil_ExceptionHandler)encoder_interrupt_handler,
+								(void *)GpioInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+
+	// Connect timer interrupt to handler
+	status = XScuGic_Connect(&timer,
+								TIMER_INTERRUPT_ID,
+								(Xil_ExceptionHandler)timer_interrupt_handler,
+								(void *)TmrInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Enable GPIO interrupts interrupt
+	XGpio_InterruptEnable(GpioInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+	// Enable GPIO and timer interrupts in the controller
+	XScuGic_Enable(&timer, ENCODER_INTERRUPT_ID);
+
+	XScuGic_Enable(&timer, TIMER_INTERRUPT_ID);
+
+
+	return XST_SUCCESS;
+}
+
+
+
+void init_alive_task(void)
+{
+	int Status;
+
+	/* GPIO driver initialisation */
+	Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("LEDS failed!");
+	}
+
+	/*Set the direction for the LEDs to output. */
+	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, 0x0);
+
+	//makes sure the task is stopped
+	_stop(0);
+
+	// Start task
+	_starts(ALIVE_TASK, MILLI_SEC(500));
+}
+
+void alive_task(void)
+{
+	// Toggles status LED every 1 sec.
+	XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, led); //LED 1
+
+	/* Flip LEDs. */
+	led = ~led;
+
+	// Wait 1 sec.
+	_wait(MILLI_SEC(500));
+}
+
+void init_pwm_task(void){
+	int status = pwm_deluxe_Initialize(&pwm_gen_inst,DEVICE_ID);
+	//pwm_deluxe__enable_in_write(&pwm_gen_inst,1);
+	if (status != XST_SUCCESS){
+		xil_printf("PWM_generator initialize has failed!\r\n");
+	}
+	else {
+		xil_printf("PWM_generator initialize has succeded!\r\n");
+	}
+	pwm_deluxe_timing_in_write(&pwm_gen_inst,0);
+	u32 freq = 20000;
+	pwm_deluxe_frequency_in_write(&pwm_gen_inst,freq);
+	_starts(PWM_TASK, MILLI_SEC(500));
+}
+
+void pwm_task(void){
+	u32 duty = 100z;
+	pwm_deluxe_dutycycle_in_write(&pwm_gen_inst,duty);
+
+	// Wait 0.01s
+	_wait(MILLI_SEC(10));
+}
+
+void init_encoder_task(void)
+{
+	// Initialise encoder gpio
+	XGpio_Initialize(&encoder_gpio, ENCODER_DEVICE_ID);
+	XGpio_SetDataDirection(&encoder_gpio, ENCODER_CHANNEL, 0xFF);
+
+	// Initialise timer
+	XTmrCtr_Initialize(&timer, TMR_DEVICE_ID);
+	XTmrCtr_SetHandler(&timer, timer_interrupt_handler, &timer);
+	XTmrCtr_SetResetValue(&timer, 0, MAX_COUNT - TMR_LOAD);
+	XTmrCtr_SetOptions(&timer, 0, XTC_INT_MODE_OPTION);
+
+	// Initialise interrupt controller
+	IntcInitFunction(INTERRUPT_DEVICE_ID, &timer, &encoder_gpio);
+
+	XTmrCtr_Start(&timer, 0);
+
+	_starts(ENCODER_TASK, MILLI_SEC(10));
+}
+
+void encoder_task(void)
+{
+	if(!(val == old_val))
+	{
+		if(val > old_val)
+		{
+			if(pwm_val < 1000)
+			{
+				pwm_val++;
+			}
+		}
+		else
+		{
+			if(!(pwm_val == 0))
+			{
+				pwm_val--;
+			}
+		}
+		old_val = val;
+	}
+}
+
+
+void init_uart_rx_task()
+{
+	_starts(UART_RX_TASK, MILLI_SEC(1));
+}
+
+void uart_rx_task()
+{
+	if (XUartPs_IsReceiveData(UART_BASEADDR))
+	{
+		rx_buffer[rx_tail] = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+		rx_tail++;
+	}
+	_wait(MILLI_SEC(1));
+}
+
+void init_uart_tx_task()
+{
+	print("\033[1J");
+	print("\033[0;0H");
+	print("khaOS Ensues...\n\n\r");
+	_starts(UART_TX_TASK,MILLI_SEC(250));
+}
+
+void uart_tx_task()
+{
+	print("\033[3;1H");
+	print("\033[J");
+
+	uint8_t i;
+	print("User Message: ");
+	if(rx_buffer[rx_tail-1] == 0xD)
+	{
+		for(i = 0; i < rx_tail; i++)
+		{
+			xil_printf("%c",rx_buffer[i]);
+		}
+		rx_tail = 0x00;
+	}
+	print("\n\n\r");
+
+	int perc_tenths = pwm_val%10;
+	xil_printf("PWM Value: %d.%d %",pwm_val/10, perc_tenths);
+	//_stop(UART_TX_TASK);
+	_wait(MILLI_SEC(250));
+}
+
+
+
+int main(void)
+/*****************************************************************************
+*   Input    : NONE
+*   Output   : Returns 0
+*   Function : Init hardware and then loop forever
+******************************************************************************/
+{
+
+	start_rtcs_scheduler();		// Call scheduler
+
+  return( 0 );
+}
+
+/****************************** End Of Module *******************************/

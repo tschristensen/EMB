@@ -1,0 +1,127 @@
+/*****************************************************************************
+* University of Southern Denmark
+* Embedded C Programming (ECP)
+*
+* MODULENAME.: main.c
+*
+* PROJECT....: ECP
+*
+* DESCRIPTION: See module specification file (.h-file).
+*
+* Change Log:
+******************************************************************************
+* Date    Id    Change
+* YYMMDD
+* --------------------
+* 0902012  KHA   Module created.
+*
+*****************************************************************************/
+
+/***************************** Include files *******************************/
+
+//#include "khaOS/schedule.c"
+#include "khaOS/rtcs.h"
+#include "xgpio.h"
+#include "xparameters.h"
+#include "pwm_deluxe.h"
+
+/*****************************    Defines    *******************************/
+
+#define PI				3.14159265359
+#define DEVICE_ID XPAR_PWM_DELUXE_0_DEVICE_ID
+
+#define UART_BASEADDR 			XPAR_PS7_UART_1_BASEADDR
+#define ALIVE_LED_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device that LEDs are connected to */
+#define ENCODER_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+#define TMR_DEVICE_ID			XPAR_TMRCTR_0_DEVICE_ID
+#define INTERRUPT_DEVICE_ID		XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+#define ENCODER_INTERRUPT_ID	XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define TIMER_INTERRUPT_ID   	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+
+#define LED_CHANNEL 			1							/* GPIO port for LEDs */
+#define ENCODER_CHANNEL			1							/* GPIO port for LEDs */
+#define ENCODER_INTERRUPT 		XGPIO_IR_CH1_MASK
+#define MAX_COUNT				0xFFFFFFFF
+#define TMR_LOAD				0x0003D090
+
+
+/*****************************   Constants   *******************************/
+
+/*****************************   Variables   *******************************/
+int led = 0x1;
+uint32_t position;
+XGpio Gpio;											/* GPIO Device driver instance 	*/
+pwm_deluxe pwm_gen_inst;							/* pwm  instance 				*/
+
+/*****************************   Functions   *******************************/
+
+void init_alive_task(void)
+{
+	int Status;
+
+	/* GPIO driver initialisation */
+	Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("LEDS failed!");
+	}
+
+	/*Set the direction for the LEDs to output. */
+	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, 0x0);
+
+	//makes sure the task is stopped
+	_stop(0);
+
+	// Start task
+	_starts(ALIVE_TASK, MILLI_SEC(500));
+}
+
+void alive_task(void)
+{
+	// Toggles status LED every 1 sec.
+	XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, led); //LED 1
+
+	/* Flip LEDs. */
+	led = ~led;
+
+	// Wait 1 sec.
+	_wait(MILLI_SEC(500));
+}
+
+void init_pwm_task(void){
+	int status = pwm_deluxe_Initialize(&pwm_gen_inst,DEVICE_ID);
+	//pwm_deluxe__enable_in_write(&pwm_gen_inst,1);
+	if (status != XST_SUCCESS){
+		xil_printf("PWM_generator initialize has failed!\r\n");
+	}
+	else {
+		xil_printf("PWM_generator initialize has succeded!\r\n");
+	}
+
+	u32 freq = 20000;
+	pwm_deluxe_frequency_in_write(&pwm_gen_inst,freq);
+	_starts(PWM_TASK, MILLI_SEC(500));
+}
+
+void pwm_task(void){
+	u32 duty = 500;
+	pwm_deluxe_dutycycle_in_write(&pwm_gen_inst,duty);
+	// Wait 0.01s
+	_wait(MILLI_SEC(10));
+}
+
+
+int main(void)
+/*****************************************************************************
+*   Input    : NONE
+*   Output   : Returns 0
+*   Function : Init hardware and then loop forever
+******************************************************************************/
+{
+
+	start_rtcs_scheduler();		// Call scheduler
+
+  return( 0 );
+}
+
+/****************************** End Of Module *******************************/

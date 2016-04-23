@@ -1,0 +1,71 @@
+12:55:20 **** Auto Build of configuration Debug for project lab_8 ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../lab_8_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:185:33: warning: passing argument 1 of 'XScuGic_CfgInitialize' from incompatible pointer type
+  status = XScuGic_CfgInitialize(&timer, IntcConfig, IntcConfig->CpuBaseAddress);
+                                 ^
+In file included from ../src/main.c:28:0:
+../../lab_8_bsp/ps7_cortexa9_0/include/xscugic.h:289:6: note: expected 'struct XScuGic *' but argument is of type 'struct XTmrCtr *'
+ s32  XScuGic_CfgInitialize(XScuGic *InstancePtr, XScuGic_Config *ConfigPtr,
+      ^
+../src/main.c:189:32: warning: passing argument 1 of 'InterruptSystemSetup' from incompatible pointer type
+  status = InterruptSystemSetup(&timer);
+                                ^
+../src/main.c:162:5: note: expected 'struct XScuGic *' but argument is of type 'struct XTmrCtr *'
+ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+     ^
+../src/main.c:193:27: warning: passing argument 1 of 'XScuGic_Connect' from incompatible pointer type
+  status = XScuGic_Connect(&timer,
+                           ^
+In file included from ../src/main.c:28:0:
+../../lab_8_bsp/ps7_cortexa9_0/include/xscugic.h:282:6: note: expected 'struct XScuGic *' but argument is of type 'struct XTmrCtr *'
+ s32  XScuGic_Connect(XScuGic *InstancePtr, u32 Int_Id,
+      ^
+../src/main.c:201:27: warning: passing argument 1 of 'XScuGic_Connect' from incompatible pointer type
+  status = XScuGic_Connect(&timer,
+                           ^
+In file included from ../src/main.c:28:0:
+../../lab_8_bsp/ps7_cortexa9_0/include/xscugic.h:282:6: note: expected 'struct XScuGic *' but argument is of type 'struct XTmrCtr *'
+ s32  XScuGic_Connect(XScuGic *InstancePtr, u32 Int_Id,
+      ^
+../src/main.c:212:17: warning: passing argument 1 of 'XScuGic_Enable' from incompatible pointer type
+  XScuGic_Enable(&timer, ENCODER_INTERRUPT_ID);
+                 ^
+In file included from ../src/main.c:28:0:
+../../lab_8_bsp/ps7_cortexa9_0/include/xscugic.h:286:6: note: expected 'struct XScuGic *' but argument is of type 'struct XTmrCtr *'
+ void XScuGic_Enable(XScuGic *InstancePtr, u32 Int_Id);
+      ^
+../src/main.c:214:17: warning: passing argument 1 of 'XScuGic_Enable' from incompatible pointer type
+  XScuGic_Enable(&timer, TIMER_INTERRUPT_ID);
+                 ^
+In file included from ../src/main.c:28:0:
+../../lab_8_bsp/ps7_cortexa9_0/include/xscugic.h:286:6: note: expected 'struct XScuGic *' but argument is of type 'struct XTmrCtr *'
+ void XScuGic_Enable(XScuGic *InstancePtr, u32 Int_Id);
+      ^
+../src/main.c: In function 'init_encoder_task':
+../src/main.c:285:29: warning: passing argument 2 of 'XTmrCtr_SetHandler' from incompatible pointer type
+  XTmrCtr_SetHandler(&timer, timer_interrupt_handler, &timer);
+                             ^
+In file included from ../src/main.c:27:0:
+../../lab_8_bsp/ps7_cortexa9_0/include/xtmrctr.h:294:6: note: expected 'XTmrCtr_Handler' but argument is of type 'void (*)(void *)'
+ void XTmrCtr_SetHandler(XTmrCtr * InstancePtr, XTmrCtr_Handler FuncPtr,
+      ^
+Finished building: ../src/main.c
+ 
+Building target: lab_8.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lab_8_bsp/ps7_cortexa9_0/lib -o "lab_8.elf"  ./src/timer/timer_pwm_cnf.o  ./src/khaOS/rtcs_cpu.o ./src/khaOS/schedule.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab_8.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_8.elf  |tee "lab_8.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36184	   2032	  23012	  61228	   ef2c	lab_8.elf
+Finished building: lab_8.elf.size
+ 
+
+12:55:20 Build Finished (took 234ms)
+

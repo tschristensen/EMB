@@ -1,0 +1,67 @@
+11:41:10 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:41:15 INFO  : XSDB server has started successfully.
+11:41:16 INFO  : Processing command line option -hwspec /home/mikkeljaedicke/EMP/Shared/EMB/lab_8/lab_8.sdk/design_1_wrapper.hdf.
+11:50:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:50:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772556A" && level==0} -index 1' command is executed.
+11:50:35 INFO  : FPGA configured successfully with bitstream "/home/mikkeljaedicke/EMP/Shared/EMB/lab_8/lab_8.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:50:50 INFO  : ps7_init is completed.
+11:50:50 INFO  : ps7_post_config is completed.
+11:50:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:53:03 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:53:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:53:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772556A" && level==0} -index 1' command is executed.
+11:53:55 INFO  : FPGA configured successfully with bitstream "/home/mikkeljaedicke/EMP/Shared/EMB/lab_8/lab_8.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:54:00 INFO  : ps7_init is completed.
+11:54:00 INFO  : ps7_post_config is completed.
+11:54:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:04:28 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:04:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:04:54 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:04:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:05:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:05:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772556A" && level==0} -index 1' command is executed.
+12:05:12 INFO  : FPGA configured successfully with bitstream "/home/mikkeljaedicke/EMP/Shared/EMB/lab_8/lab_8.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:05:19 INFO  : ps7_init is completed.
+12:05:19 INFO  : ps7_post_config is completed.
+12:05:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:05:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:05:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:31:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:31:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772556A" && level==0} -index 1' command is executed.
+12:31:48 INFO  : FPGA configured successfully with bitstream "/home/mikkeljaedicke/EMP/Shared/EMB/lab_8/lab_8.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:32:03 INFO  : ps7_init is completed.
+12:32:03 INFO  : ps7_post_config is completed.
+12:32:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:35:22 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:35:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:35:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:35:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:35:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:35:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:37:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:37:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772556A" && level==0} -index 1' command is executed.
+12:37:17 INFO  : FPGA configured successfully with bitstream "/home/mikkeljaedicke/EMP/Shared/EMB/lab_8/lab_8.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:37:23 INFO  : ps7_init is completed.
+12:37:23 INFO  : ps7_post_config is completed.
+12:37:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:37:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:37:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:38:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:38:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:38:40 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:38:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:43:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:43:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:44:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:44:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:45:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:45:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:52:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:52:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:52:49 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:52:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:53:38 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:53:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:55:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:55:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:59:15 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
